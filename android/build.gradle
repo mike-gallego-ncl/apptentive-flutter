@@ -34,7 +34,23 @@ android {
     defaultConfig {
         minSdkVersion 21
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
 }
+
 
 dependencies {
     implementation 'com.apptentive:apptentive-kit-android:6.9.3'
